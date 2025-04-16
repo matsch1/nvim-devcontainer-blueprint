@@ -1,5 +1,6 @@
 #!/bin/bash
 
-chown $UID:$GID -R /
+sudo chown $UID:$GID -R /workspaces/
+sudo chown $UID:$GID -R /home/$USER
 
 exit
