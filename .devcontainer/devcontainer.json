@@ -1,0 +1,13 @@
+{
+  "name": "Flutter",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "sudo apt-get update && /home/dev/.dotfiles/scripts/setup-profile.sh dev true devcontainer && stow -d /home/dev/.dotfiles -t /home/dev nvim",
+  "mounts": [
+    "source=${localEnv:HOME}/.dotfiles,target=/home/dev/.dotfiles,type=bind"
+  ],
+  "features": {
+    "ghcr.io/duduribeiro/devcontainer-features/neovim:1": {}
+  }
+}

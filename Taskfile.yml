@@ -1,0 +1,29 @@
+version: '3'
+
+tasks:
+  dev-build:
+    desc: devcontainer build
+    cmds:
+      - devcontainer build --workspace-folder .
+    silent: false
+  dev-up:
+    desc: devcontainer up
+    cmds:
+      - devcontainer up --workspace-folder .
+    silent: false
+  dev-bash:
+    desc: devcontainer exec bash
+    cmds:
+      - devcontainer exec --workspace-folder . zsh
+    silent: false
+  dev-nvim:
+    desc: devcontainer exec nvim
+    cmds:
+      - devcontainer exec --workspace-folder . nvim
+    silent: false
+  dev:
+    desc: devcontainer build up exec 
+    cmds:
+    - task: dev-build
+    - task: dev-up
+    - task: dev-bash

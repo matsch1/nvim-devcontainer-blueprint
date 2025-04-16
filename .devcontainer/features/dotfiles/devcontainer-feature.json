@@ -1,0 +1,6 @@
+{
+  "id": "dotfiles",
+  "name": "installs necessary dotfiles",
+  "version": "1.0.0",
+  "description": "Installs Gnu stow and links necessary dotfiles"
+}
